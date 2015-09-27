@@ -5,7 +5,7 @@ title = "about"
 
 +++
 
-## What is there?
+## What is here?
 
 Tech blog.
 
@@ -30,4 +30,4 @@ SIer -> Web Programmer
 * Golang
 * Single page web application
 * Drowing and Writing
-* Watch animes and play games
+* Watch animes, Read mangas and play games
