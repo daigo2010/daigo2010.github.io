@@ -12,7 +12,7 @@ category = "tec"
 
 [params]
 # site description, will show under navigation
-description = "Daigo Suganuma's personal profile and blog."
+description = "This page contents Daigo Suganuma's personal profile and blog."
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss = "/index.xml"
