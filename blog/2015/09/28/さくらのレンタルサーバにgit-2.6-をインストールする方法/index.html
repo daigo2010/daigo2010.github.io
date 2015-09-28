@@ -1,83 +1,105 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 
-<html lang="ja-jp">
+<meta charset="utf-8">
 
-<head>
-	<meta charset="utf-8">
-	<title>さくらのレンタルサーバにgit 2.6 をインストールする方法 - Daigo Suganuma Memorabilia</title>
-	<meta name="author" content="map[]">
 
-	
-	
-	<meta name="description" content="">
-	
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-	
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:url" content="http://daigo2010.github.io/">
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="さくらのレンタルサーバにgit 2.6 をインストールする方法 &middot; Daigo Suganuma Memorabilia">
+
+<meta property="og:site_name" content="Daigo Suganuma Memorabilia">
+
+<title>
     
-	<link rel="canonical" href="http://daigo2010.github.io/blog/2015/09/28/%E3%81%95%E3%81%8F%E3%82%89%E3%81%AE%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E3%81%ABgit-2.6-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/">
-	<link href="http://daigo2010.github.io/assets/favicon.ico" rel="shortcut icon">
-	<link href="http://daigo2010.github.io/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-	<link href="http://daigo2010.github.io/css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
-	
-	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-	
-  
-
-</head>
+    さくらのレンタルサーバにgit 2.6 をインストールする方法
+    
+</title>
 
 
-<body>
-	<div class="container">
-		<div class="left-col">
-			<div class="intrude-less">
-			<header id="header" class="inner"><div class="profilepic">
-	
-	
-	
-</div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/default.min.css">
+<link rel="stylesheet" href="http://daigo2010.github.io//css/styles.css">
+<link rel="stylesheet" href="http://daigo2010.github.io//css/custom.css">
 
-<nav id="main-nav"><ul class="main">
-    <li><a href="/">Blog</a></li>
-    <li><a href="/about/">About</a></li>
-    <li><a href="/post/">Archives</a></li>
-</ul>
 
-</nav>
-<nav id="sub-nav">
-	<div class="social">
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-    	
-    	
-	</div>
-</nav>
-</header>
-			</div>
-		</div>
-		<div class="mid-col">
-			
-			<div class="mid-col-container">
-				<div id="content" class="inner">
-					<div itemscope itemtype="http://schema.org/Blog">
-					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">さくらのレンタルサーバにgit 2.6 をインストールする方法</h1>
-	<div class="entry-content" itemprop="articleBody">
+<link rel="shortcut icon" href="http://daigo2010.github.io//assets/favicon.ico">
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://daigo2010.github.io//index.xml">
+
+
+<div class="container">
+    <header class="nav">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://daigo2010.github.io/">Daigo Suganuma Memorabilia</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="http://daigo2010.github.io//post">All Posts</a></li>
+                        <li><a href="http://daigo2010.github.io//tags">Tags</a></li>
+                        
+                        <li><a href="http://daigo2010.github.io/about/">about</a></li>
+                        
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        
+                        <li>
+                            <a href="https://twitter.com/daigo_suga" target="_blank">
+                                <i class="fa fa-twitter-square"></i>
+                                Twitter</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="https://github.com/daigo2010" target="_blank">
+                                <i class="fa fa-github-square"></i>
+                                GitHub
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+<div class="row">
+    <div class="col-md-8">
+        <article class="post">
+
+            <header>
+                <div class="post-date">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <time datetime="2015-09-28 22:18">
+                        2015-09-28 22:18
+                    </time>
+                </div>
+                <h1 class="post-title">
+                    <a href="http://daigo2010.github.io/blog/2015/09/28/%E3%81%95%E3%81%8F%E3%82%89%E3%81%AE%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E3%81%ABgit-2.6-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/">さくらのレンタルサーバにgit 2.6 をインストールする方法</a>
+                </h1>
+            </header>
+
+            <div class="post-content">
+                
 
 <h2 id="はじめに:653a304bbe54099f4a93ae5b6f7a7e87">はじめに</h2>
 
@@ -128,40 +150,160 @@ gmake prefix=$HOME/packages install
 </code></pre>
 
 <p>以上。</p>
-</div></article>
-					
-						<div class="share">
-	<div class="addthis_toolbox addthis_default_style ">
-	
-	
-	
-	
-	</div>
-	
+
+            </div>
+
+            <aside>
+                
+                <ul class="list-inline post-tags">
+                    
+                    <li>
+                        <a href="http://daigo2010.github.io//tags/%E3%81%95%E3%81%8F%E3%82%89">
+                            <i class="fa fa-tags"></i>
+                            さくら
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://daigo2010.github.io//tags/%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90">
+                            <i class="fa fa-tags"></i>
+                            レンタルサーバ
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="http://daigo2010.github.io//tags/git">
+                            <i class="fa fa-tags"></i>
+                            git
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                
+                
+                <h3>Related Post</h3>
+                <ul class="post-rels">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </aside>
+            
+            
+            <footer>
+
+                <nav>
+                    <ul class="pager">
+
+                        
+                        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        
+
+                        <li><a href="http://daigo2010.github.io//post">All Posts</a></li>
+
+                        
+                        <li class="next"><a href="http://daigo2010.github.io/about/">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        
+
+                    </ul>
+                </nav>
+
+                
+            </footer>
+
+        </article>
+    </div>
+    <div class="col-md-4">
+        
+<aside>
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-4 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Recent Posts</h2>
+                </div>
+                <div class="list-group">
+                    
+                    <a href="/blog/2015/09/28/%E3%81%95%E3%81%8F%E3%82%89%E3%81%AE%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E3%81%ABgit-2.6-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/" class="list-group-item">さくらのレンタルサーバにgit 2.6 をインストールする方法</a>
+                    
+                    <a href="/about/" class="list-group-item">about</a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Tags</h2>
+                </div>
+                <div class="list-group">
+                    
+                    
+                    
+                    <a href="http://daigo2010.github.io//tags/git" class="list-group-item">
+                        <span class="badge">1</span>
+                        git
+                    </a>
+                    
+                    
+                    <a href="http://daigo2010.github.io//tags/%E3%81%95%E3%81%8F%E3%82%89" class="list-group-item">
+                        <span class="badge">1</span>
+                        さくら
+                    </a>
+                    
+                    
+                    <a href="http://daigo2010.github.io//tags/%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90" class="list-group-item">
+                        <span class="badge">1</span>
+                        レンタルサーバ
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</aside>
+
+    </div>
 </div>
 
-					
-					
-					
+</div>
+<hr>
 
+<footer class="container copy">
+    <p>&copy; 2015  Daigo Suganuma </p>
+	<p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a></p>
+	<p>Theme <a href="https://github.com/dim0627/hugo_theme_hugostrap" target="_blank">Hugostrap</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a>, Inspired from <a href="https://github.com/kAworu/octostrap3" target="_blank">Octostrap3</a></p>
+</footer>
 
-				    </div>
-				</div>
-			</div>
-			<footer id="footer" class="inner">Copyright &copy; 2015
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 
-    Daigo Suganuma Memorabilia
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
-<script src="http://daigo2010.github.io//js/slash.js"></script>
-<script src="http://daigo2010.github.io//js/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-(function($){
-	$('.fancybox').fancybox();
-})(jQuery);
-</script></footer>
-		</div>
-	</div>
-	
-</body>
-</html>
+ga('create', 'UA-68147214-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<script>
+document.write('<script src="//sharebutton.net/plugin/sharebutton.php?type=horizontal&u=' + encodeURIComponent(document.location.href) + '"></scr' + 'ipt>');
+</script>
+

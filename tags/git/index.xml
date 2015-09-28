@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>Git on Daigo Suganuma Memorabilia </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>Daigo Suganuma Memorabilia </title>
     <link>http://daigo2010.github.io/tags/git/</link>
-    <language>ja-jp</language>
+    <language>en-us</language>
+    <author>Daigo Suganuma</author>
+    <rights>(C) 2015</rights>
+    <updated>2015-09-28 22:18:34 &#43;0900 JST</updated>
+
     
-    
-    <updated>Mon, 28 Sep 2015 22:18:34 JST</updated>
-    
-    <item>
-      <title>さくらのレンタルサーバにgit 2.6 をインストールする方法</title>
-      <link>http://daigo2010.github.io/blog/2015/09/28/%E3%81%95%E3%81%8F%E3%82%89%E3%81%AE%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E3%81%ABgit-2.6-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Mon, 28 Sep 2015 22:18:34 JST</pubDate>
       
-      <guid>http://daigo2010.github.io/blog/2015/09/28/%E3%81%95%E3%81%8F%E3%82%89%E3%81%AE%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E3%81%ABgit-2.6-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
-      <description>
+        <item>
+          <title>さくらのレンタルサーバにgit 2.6 をインストールする方法</title>
+          <link>http://daigo2010.github.io/blog/2015/09/28/%E3%81%95%E3%81%8F%E3%82%89%E3%81%AE%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E3%81%ABgit-2.6-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
+          <pubDate>Mon, 28 Sep 2015 22:18:34 JST</pubDate>
+          <author>Daigo Suganuma</author>
+          <guid>http://daigo2010.github.io/blog/2015/09/28/%E3%81%95%E3%81%8F%E3%82%89%E3%81%AE%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E3%81%ABgit-2.6-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
+          <description>
 
 &lt;h2 id=&#34;はじめに:653a304bbe54099f4a93ae5b6f7a7e87&#34;&gt;はじめに&lt;/h2&gt;
 
@@ -67,7 +68,9 @@ gmake prefix=$HOME/packages install
 
 &lt;p&gt;以上。&lt;/p&gt;
 </description>
-    </item>
+        </item>
+      
     
+
   </channel>
 </rss>
