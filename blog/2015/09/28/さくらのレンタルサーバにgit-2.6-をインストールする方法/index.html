@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>about - Daigo Suganuma Memorabilia</title>
+	<title>さくらのレンタルサーバにgit 2.6 をインストールする方法 - Daigo Suganuma Memorabilia</title>
 	<meta name="author" content="map[]">
 
 	
@@ -17,7 +17,7 @@
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     
-	<link rel="canonical" href="http://daigo2010.github.io/about/">
+	<link rel="canonical" href="http://daigo2010.github.io/blog/2015/09/28/%E3%81%95%E3%81%8F%E3%82%89%E3%81%AE%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%AB%E3%82%B5%E3%83%BC%E3%83%90%E3%81%ABgit-2.6-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/">
 	<link href="http://daigo2010.github.io/assets/favicon.ico" rel="shortcut icon">
 	<link href="http://daigo2010.github.io/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 	<link href="http://daigo2010.github.io/css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -76,37 +76,58 @@
 				<div id="content" class="inner">
 					<div itemscope itemtype="http://schema.org/Blog">
 					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 class="title" itemprop="name">about</h1>
+    <h1 class="title" itemprop="name">さくらのレンタルサーバにgit 2.6 をインストールする方法</h1>
 	<div class="entry-content" itemprop="articleBody">
 
-<h2 id="what-is-here:6083a88ee3411b0d17ce02d738f69d47">What is here?</h2>
+<h2 id="はじめに:653a304bbe54099f4a93ae5b6f7a7e87">はじめに</h2>
 
-<p>Tech blog.</p>
+<p>さくらのレンタルサーバを使っているのだが、gitのバージョンが1.9のためgit add -pが使えないという状況に陥った。(2015-09-28時点)</p>
 
-<p>技術メモを載せる予定。</p>
+<p>さくらのレンタルサーバは共用サーバのため、自分の好きなバージョンのプログラムを導入しようとなると$HOME以下にプログラム格納用ディレクトリを切って、そこにインストールすることになる。</p>
 
-<h2 id="why:6083a88ee3411b0d17ce02d738f69d47">Why?</h2>
+<p>今回はgit add -pを使いたいので、$HOME以下にpackagesディレクトリを作成して、そこにgitをインストールことにした。以下、手順。</p>
 
-<p>For lerning and self appeal.</p>
-
-<p>アプトプットを増やすため。</p>
-
-<h2 id="who-are-you:6083a88ee3411b0d17ce02d738f69d47">Who are you?</h2>
-
-<p>Daigo Suganuma.</p>
-
-<p>しがないエンジニア。</p>
-
-<p>SIer -&gt; Web Programmer</p>
-
-<h2 id="interested:6083a88ee3411b0d17ce02d738f69d47">Interested</h2>
+<h2 id="手順:653a304bbe54099f4a93ae5b6f7a7e87">手順</h2>
 
 <ul>
-<li>Golang</li>
-<li>Single page web application</li>
-<li>Drowing and Writing</li>
-<li>Watch animes, Read mangas and play games</li>
+<li>まず$HOME以下にpackagesディレクトリを作成する。</li>
 </ul>
+
+<pre><code class="language-zsh">mkdir ~/packages
+</code></pre>
+
+<ul>
+<li>適当な場所でgit cloneし、gitのソースコードを取得する。</li>
+</ul>
+
+<pre><code class="language-zsh">cd ~
+git clone git@github.com:git/git.git
+</code></pre>
+
+<ul>
+<li>prefixに$HOME/packagesを指定してgmake &amp; gmake installを実行</li>
+</ul>
+
+<pre><code class="language-zsh">cd git
+gmake prefix=$HOME/packages
+gmake prefix=$HOME/packages install
+</code></pre>
+
+<ul>
+<li>$HOME/packages/binまでのパスを通す</li>
+</ul>
+
+<pre><code class="language-zsh">export PATH=&quot;$HOME/packages/bin:$PATH&quot;
+</code></pre>
+
+<ul>
+<li>念のためバージョン確認</li>
+</ul>
+
+<pre><code class="language-zsh">git --version
+</code></pre>
+
+<p>以上。</p>
 </div></article>
 					
 						<div class="share">
