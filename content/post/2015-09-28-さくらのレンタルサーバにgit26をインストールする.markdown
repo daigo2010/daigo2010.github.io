@@ -1,0 +1,46 @@
++++
+date = "2015-09-28T22:18:34+09:00"
+draft = false
+title = "さくらのレンタルサーバにgit 2.6 をインストールする方法"
+comments = true
+tags = ["さくら", "レンタルサーバ", "git"]
++++
+
+## はじめに
+
+さくらのレンタルサーバを使っているのだが、gitのバージョンが1.9のためgit add -pが使えないという状況に陥った。(2015-09-28時点)
+
+さくらのレンタルサーバは共用サーバのため、自分の好きなバージョンのプログラムを導入しようとなると$HOME以下にプログラム格納用ディレクトリを切って、そこにインストールすることになる。
+
+今回はgit add -pを使いたいので、$HOME以下にpackagesディレクトリを作成して、そこにgitをインストールことにした。以下、手順。
+
+<!--more-->
+
+## 手順
+
+* まず$HOME以下にpackagesディレクトリを作成する。
+```zsh
+mkdir ~/packages
+```
+* 適当な場所でgit cloneし、gitのソースコードを取得する。
+```zsh
+cd ~
+git clone git@github.com:git/git.git
+```
+* prefixに$HOME/packagesを指定してgmake & gmake installを実行
+```zsh
+cd git
+gmake prefix=$HOME/packages
+gmake prefix=$HOME/packages install
+```
+* $HOME/packages/binまでのパスを通す
+```zsh
+export PATH="$HOME/packages/bin:$PATH"
+```
+* 念のためバージョン確認
+```zsh
+git --version
+```
+
+
+以上。
